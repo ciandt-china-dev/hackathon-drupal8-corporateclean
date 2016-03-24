@@ -6,10 +6,6 @@
   {{ page.navigation }}
 {% endif %}
 
-{% if page.highlighted %}
-  {{ page.highlighted }}
-{% endif %}
-
 {% if is_front %}
 <!-- #banner -->
 <div id="banner">
@@ -142,6 +138,10 @@
           {% if page.breadcrumb %}
             {{ page.breadcrumb }}
           {% endif%}
+
+          {% if page.highlighted %}
+            {{ page.highlighted }}
+          {% endif %}
 
           {% if page.content %}
             {{ page.content }}
