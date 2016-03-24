@@ -6,3 +6,12 @@ style:
       css/mobile.css: { media: all and (max-width: 760px) }
       style.css: {}
       color/colors.css: {}
+basic-layout:
+  css:
+    component:
+      css/basic-layout.css: { preprocess: false, group: CSS_THEME, browsers: { IE: 'lte IE 8', '!IE': false } }
+
+ie:
+  css:
+    component:
+      css/ie.css: {preprocess: false, group: CSS_THEME, browsers: { IE: 'lte IE 8', '!IE': false } }

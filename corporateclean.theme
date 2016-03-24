@@ -189,3 +189,47 @@ function corporateclean_page_attachments_alter(&$page) {
   $page['#attached']['drupalSettings']['slideshow_settings']['slideshow_wrap'] = theme_get_setting('slideshow_wrap','corporateclean');
   $page['#attached']['drupalSettings']['slideshow_settings']['slideshow_pause'] = theme_get_setting('slideshow_pause','corporateclean');
 }
+
+function corporateclean_page_alter($page) {
+
+  if (theme_get_setting('responsive_meta','corporateclean')):
+  $mobileoptimized = array(
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => array(
+    'name' =>  'MobileOptimized',
+    'content' =>  'width'
+    )
+  );
+
+  $handheldfriendly = array(
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => array(
+    'name' =>  'HandheldFriendly',
+    'content' =>  'true'
+    )
+  );
+
+  $viewport = array(
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => array(
+    'name' =>  'viewport',
+    'content' =>  'width=device-width, initial-scale=1'
+    )
+  );
+
+  drupal_add_html_head($mobileoptimized, 'MobileOptimized');
+  drupal_add_html_head($handheldfriendly, 'HandheldFriendly');
+  drupal_add_html_head($viewport, 'viewport');
+  endif;
+
+}
+
+function corporateclean_preprocess_html(&$variables) {
+  if (!theme_get_setting('responsive_respond','corporateclean')) {
+    $variables['#attached']['library'][] = 'corporateclean/basic-layout';
+  }
+  $variables['#attached']['library'][] = 'corporateclean/ie';
+}
