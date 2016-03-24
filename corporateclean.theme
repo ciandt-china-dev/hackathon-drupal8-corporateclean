@@ -180,3 +180,12 @@ function corporateclean_preprocess_breadcrumb(&$variables) {
     $breadcrumb[] = ['text' => $title];
   }
 }
+
+function corporateclean_page_attachments_alter(&$page) {
+
+  $page['#attached']['drupalSettings']['slideshow_settings']['slideshow_effect'] = theme_get_setting('slideshow_effect','corporateclean');
+  $page['#attached']['drupalSettings']['slideshow_settings']['slideshow_effect_time'] = theme_get_setting('slideshow_effect_time','corporateclean');
+  $page['#attached']['drupalSettings']['slideshow_settings']['slideshow_randomize'] = theme_get_setting('slideshow_randomize','corporateclean');
+  $page['#attached']['drupalSettings']['slideshow_settings']['slideshow_wrap'] = theme_get_setting('slideshow_wrap','corporateclean');
+  $page['#attached']['drupalSettings']['slideshow_settings']['slideshow_pause'] = theme_get_setting('slideshow_pause','corporateclean');
+}
