@@ -238,3 +238,7 @@ function corporateclean_preprocess_html(&$variables) {
   }
   $variables['#attached']['library'][] = 'corporateclean/ie';
 }
+
+function corporateclean_preprocess_page(&$variables) {
+  $variables['credits_display'] = theme_get_setting('credits_display', 'corporateclean');
+}
