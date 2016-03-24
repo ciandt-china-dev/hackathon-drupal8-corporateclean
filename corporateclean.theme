@@ -161,3 +161,22 @@ function corporateclean_form_system_theme_settings_alter(&$form, FormStateInterf
   );
 
 }
+
+function corporateclean_preprocess_breadcrumb(&$variables) {
+  $breadcrumb = &$variables['breadcrumb'];
+
+  $variables['breadcrumb_separator'] = theme_get_setting('breadcrumb_separator','corporateclean');
+
+  $show_breadcrumb_home = theme_get_setting('breadcrumb_home');
+
+  if (!$show_breadcrumb_home) {
+    array_shift($breadcrumb);
+  }
+
+  if (!empty($breadcrumb)) {
+    $request      = \Drupal::request();
+    $route_match  = \Drupal::routeMatch();
+    $title        = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+    $breadcrumb[] = ['text' => $title];
+  }
+}
