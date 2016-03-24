@@ -166,6 +166,7 @@ function corporateclean_preprocess_page(&$variables) {
   $theme = \Drupal::theme()->getActiveTheme()->getName();
   $variables['theme_path'] = drupal_get_path('theme', $theme);
   $variables['credits_display'] = theme_get_setting('credits_display', 'corporateclean');
+  $variables['slideshow_display'] = theme_get_setting('slideshow_display','corporateclean');
 }
 
 function corporateclean_preprocess_breadcrumb(&$variables) {
