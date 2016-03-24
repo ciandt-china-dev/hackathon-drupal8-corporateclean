@@ -165,6 +165,7 @@ function corporateclean_form_system_theme_settings_alter(&$form, FormStateInterf
 function corporateclean_preprocess_page(&$variables) {
   $theme = \Drupal::theme()->getActiveTheme()->getName();
   $variables['theme_path'] = drupal_get_path('theme', $theme);
+  $variables['credits_display'] = theme_get_setting('credits_display', 'corporateclean');
 }
 
 function corporateclean_preprocess_breadcrumb(&$variables) {
@@ -237,8 +238,4 @@ function corporateclean_preprocess_html(&$variables) {
     $variables['#attached']['library'][] = 'corporateclean/basic-layout';
   }
   $variables['#attached']['library'][] = 'corporateclean/ie';
-}
-
-function corporateclean_preprocess_page(&$variables) {
-  $variables['credits_display'] = theme_get_setting('credits_display', 'corporateclean');
 }
