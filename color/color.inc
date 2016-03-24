@@ -1,8 +1,6 @@
 <?php
 
 // Put the logo path into JavaScript for the live preview.
-drupal_add_js(array('color' => array('logo' => theme_get_setting('logo', 'corporateclean'))), 'setting');
-
 $info = array(
   // Available colors and color labels used in theme.
   'fields' => array(
@@ -139,4 +137,18 @@ $info = array(
 
   // Base file for image generation.
   'base_image' => 'color/base.png',
+
+  // Attachments.
+  '#attached' => [
+    'drupalSettings' => [
+      'color' => [
+        'logo' => theme_get_setting('logo', 'corporateclean'),
+      ],
+    ],
+  ],
 );
+
+
+
+
+
