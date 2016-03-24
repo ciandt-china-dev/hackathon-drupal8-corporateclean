@@ -22,33 +22,64 @@
   {{ page.sidebar_first }}
 {% endif %}
 
-{% if page.sidebar_first %}
-  {{ page.sidebar_first }}
-{% endif %}
 
 {% if page.sidebar_second %}
   {{ page.sidebar_second }}
 {% endif %}
 
-{% if page.footer_first %}
-  {{ page.footer_first }}
-{% endif %}
 
-{% if page.footer_second %}
-  {{ page.footer_second }}
-{% endif %}
+<!-- #footer -->  
+<div id="footer">
+  <!-- #footer-inside -->
+  <div id="footer-inside" class="container_12 clearfix">
 
-{% if page.footer_third %}
-  {{ page.footer_third }}
-{% endif %}
+    <div class="footer-area grid_4">
+      {% if page.footer_first %}
+        {{ page.footer_first }}
+      {% endif %}
+    </div>
+    <div class="footer-area grid_4">
+      {% if page.footer_second %}
+        {{ page.footer_second }}
+      {% endif %}
+    </div>
 
-{% if page.footer %}
-  {{ page.footer }}
-{% endif %}
+    <div class="footer-area grid_4">
+      {% if page.footer_third %}
+        {{ page.footer_third }}
+      {% endif %}
+    </div>
 
-{% if page.footer_bottom_right %}
-  {{ page.footer_bottom_right }}
-{% endif %}
+  </div>
+  <!-- EOF: #footer-inside -->
+</div>
+<!-- EOF: #footer -->
+
+<!-- #footer-bottom -->    
+<div id="footer-bottom">
+
+  <!-- #footer-bottom-inside --> 
+  <div id="footer-bottom-inside" class="container_12 clearfix">
+    <!-- #footer-bottom-left --> 
+    <div id="footer-bottom-left" class="grid_8">
+      {% if page.footer %}
+        {{ page.footer }}
+      {% endif %}
+    </div>
+
+    <!-- #footer-bottom-right -->
+    <div id="footer-bottom-right" class="grid_4">
+      {% if page.footer_bottom_right %}
+        {{ page.footer_bottom_right }}
+      {% endif %}
+    </div>
+    <!-- EOF: #footer-bottom-right -->
+
+  </div>
+  <!-- EOF: #footer-bottom-inside -->
+
+</div>
+<!-- EOF: #footer-bottom -->
 
 {% if page.help %}
   {{ page.help }}
