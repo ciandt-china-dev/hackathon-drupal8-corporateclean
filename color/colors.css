@@ -2,15 +2,15 @@
 /* ---------- Color Module Styles ----------- */
 body { color: #7a7a7a; background:#1a1a1a; }
 
-a, li a.active,
-#footer a:hover, #footer li a.active:hover, #footer-bottom a:hover, #footer-bottom li a.active:hover,
-#header a, #header-menu ul.menu li a:hover, #header-menu ul.menu li a.active, #header-menu ul.menu li ul.menu li a:hover,
-#navigation .block-superfish ul.sf-menu li a:focus, #navigation .block-superfish ul.sf-menu li a:hover, #navigation .block-superfish ul.sf-menu li a.active,
+a, li a.is-active,
+#footer a:hover, #footer li a.is-active:hover, #footer-bottom a:hover, #footer-bottom li a.active:hover,
+#header a, #header-menu ul.menu li a:hover, #header-menu ul.menu li a.is-active, #header-menu ul.menu li ul.menu li a:hover,
+#navigation .block-superfish ul.sf-menu li a:focus, #navigation .block-superfish ul.sf-menu li a:hover, #navigation .block-superfish ul.sf-menu li a.is-active,
 .front .node h1.front-heading { color:#1487d4; }
 
 #header-menu a, #header-menu ul.menu li a, #navigation .block-superfish ul.sf-menu li a { color:#ffffff; }
 
-#footer a, #footer li a.active, #footer-bottom a, #footer-bottom li a.active { color:#e4e4e4; }
+#footer a, #footer li a.is-active, #footer-bottom a, #footer-bottom li a.active { color:#e4e4e4; }
 
 h1, h2, h3, h4, h5, h6 { color:#1487d4; text-shadow: 1px 1px 1px #eaf1ea; }
 
@@ -45,7 +45,7 @@ ul.secondary-menu li, #footer-bottom ul.menu li { border-right:1px solid #353535
 #header-menu ul.menu li.expanded ul.menu li.expanded a:hover,
 #header-menu ul.menu li.expanded ul.menu li.leaf a:hover,
 #navigation .block-superfish ul.sf-menu li li:hover,
-#navigation .block-superfish ul.sf-menu li li a:focus, #navigation .block-superfish ul.sf-menu li li a:hover, #navigation .block-superfish ul.sf-menu li li a:active  { background-color:#1b1b1b; }
+#navigation .block-superfish ul.sf-menu li li a:focus, #navigation .block-superfish ul.sf-menu li li a:hover, #navigation .block-superfish ul.sf-menu li li a:is-active  { background-color:#1b1b1b; }
 
 #banner  {
 background: #efeeee;
