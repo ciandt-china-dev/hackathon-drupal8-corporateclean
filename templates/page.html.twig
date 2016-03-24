@@ -10,6 +10,7 @@
   {{ page.highlighted }}
 {% endif %}
 
+{% if is_front %}
 <!-- #banner -->
 <div id="banner">
 
@@ -117,6 +118,7 @@
     <!-- EOF: #slider-controls-wrapper -->
     
 </div><!-- EOF: #banner -->
+{% endif %}
 
 <!-- #content -->
 <div id="content">
@@ -136,6 +138,10 @@
       {% else %}
         <div id="main" class="grid_12">    
       {% endif %}
+
+          {% if page.breadcrumb %}
+            {{ page.breadcrumb }}
+          {% endif%}
 
           {% if page.content %}
             {{ page.content }}
