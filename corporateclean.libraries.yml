@@ -6,3 +6,12 @@ style:
       css/mobile.css: { media: all and (max-width: 760px) }
       style.css: {}
       color/colors.css: {}
+
+js:
+  js:
+    js/jquery.cycle.all.js: {}
+    js/banner.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
