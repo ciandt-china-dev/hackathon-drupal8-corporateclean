@@ -1,3 +1,6 @@
+logo:
+  path: 'themes/corporateclean/logo.png'
+  use_default: false
 breadcrumb_display : '1'
 breadcrumb_home : '1'
 breadcrumb_separator : '/'
