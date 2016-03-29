@@ -131,8 +131,7 @@ $info = array(
   'blend_target' => '#ffffff',
 
   // Preview files.
-  'preview_css' => 'color/preview.css',
-  'preview_js' => 'color/preview.js',
+  'preview_library' => 'corporateclean/color.preview',
   'preview_html' => 'color/preview.html',
 
   // Base file for image generation.
@@ -147,8 +146,3 @@ $info = array(
     ],
   ],
 );
-
-
-
-
-
