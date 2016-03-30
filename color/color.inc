@@ -4,6 +4,7 @@
  * @file
  * Put the logo path into JavaScript for the live preview.
  */
+
 $info = array(
   // Available colors and color labels used in theme.
   'fields' => array(
