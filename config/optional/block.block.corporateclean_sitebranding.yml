@@ -5,7 +5,7 @@ dependencies:
     - system
   theme:
     - corporateclean
-id: sitebranding
+id: corporateclean_sitebranding
 theme: corporateclean
 region: navigation
 weight: 0
